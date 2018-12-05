@@ -1,9 +1,180 @@
 /* 
-    Theme Name: Simple
+    Theme Name: Sleek 
     Author: iQuixotic
     Author URI: www.google.com
-    description: Very simple wordpress theme
+    Description: A better wordpress theme
     Version: 1.0
 */
 
-/* Base */
+/* - - - - - - - - - - Base - - - - - - - - - - */
+* {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #009acd;
+}
+
+a:hover {
+    color: #333;
+}
+
+/* - - - - - - - - - - Header - - - - - - - - - - */
+header {
+    background: #f3f3f3;
+    padding: 10px;
+    border-bottom: 3px solid #009acd;
+}
+
+header h1 a {
+    color: #009acd;
+}
+
+header small {
+    color: #666;
+    margin-left: 1px;
+    font-size: 14px;
+}
+
+header .header-right {
+    float: right;
+}
+
+header .header-right input[type='text'] {
+    width: 250px;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+/* - - - - - - - - - - Nav - - - - - - - - - - */
+nav.nav  li {
+    display: inline;
+    float: left;
+    padding-right: 15px;
+}
+
+nav.nav a {
+    text-decoration: none;
+}
+
+nav.main-nav {
+    height: 45px;
+    overflow: hidden;
+    background: #333;
+    color: #fff;
+    padding-top: 7px;
+}
+
+nav.main-nav li {
+    height: 40px;
+    line-height: 40px;
+}
+
+nav.main-nav a {
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+}
+
+nav.main-nav a:hover {
+    color: #009acd;
+}
+
+/* - - - - - - - - - - Content - - - - - - - - - - */
+.container {
+    width: 960px;
+    margin: auto; 
+    overflow: auto;
+}
+
+.content {
+    margin-top: 30px;
+    line-height: 1.5em;
+}
+
+.main {
+    float: left;
+    width: 65%;
+}
+
+article.post {
+    border-bottom: #ccc solid 1px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+
+article.post .meta {
+    background: #009acd;
+    color: #fff;
+    padding: 7px;
+}
+
+.button {
+    background: #009acd;
+    color: #fff;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+/* - - - - - - - - - - Sidebar - - - - - - - - - - */
+.side {
+    width: 30%;
+    float: right;
+}
+
+.block {
+    border: #ccc;
+    padding: 5px 15px 25px 15px;
+    background: #fcfcfc;
+    overflow: hidden;
+}
+
+.block h3 {
+    border-bottom: #ccc solid 1px;
+    padding-bottom: 10px;
+    padding: 5px;
+}
+
+/* - - - - - - - - - - Footer - - - - - - - - - - - */
+footer.main-footer {
+    margin-top: 40px;
+    text-align: center;
+    background: #333;
+    color: 60px;
+    padding-top: 10px;
+    overflow: auto;
+}
+
+footer.main-footer .footer-left {
+    float: left;
+}
+
+footer.main-footer .footer-right {
+    margin-top: 10px;
+    float: right;
+}
+
+footer.main-footer ul {
+    display: inline;
+}
+
+footer.main-footer li {
+    float: left;
+    padding-right: 10px;
+    list-style: none;
+}
+
+footer.main-footer a {
+    color: #fff;
+}
+
