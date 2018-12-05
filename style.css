@@ -111,3 +111,54 @@ nav.main-nav a:hover {
     padding-bottom: 10px;
     padding: 5px;
 }
+
+article.post {
+    border-bottom: #ccc solid 1px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+
+article.post .meta {
+    background: #009acd;
+    color: #fff;
+    padding: 7px;
+}
+
+.button {
+    background: #009acd;
+    color: #fff;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+footer.main-footer {
+    margin-top: 40px;
+    text-align: center;
+    background: #333;
+    color: 60px;
+    padding-top: 10px;
+    overflow: auto;
+}
+
+footer.main-footer .footer-left {
+    float: left;
+}
+
+footer.main-footer .footer-right {
+    margin-top: 10px;
+    float: right;
+}
+
+footer.main-footer ul {
+    display: inline;
+}
+
+footer.main-footer li {
+    float: left;
+    padding-right: 10px;
+    list-style: none;
+}
+
+footer.main-footer a {
+    color: #fff;
+}
