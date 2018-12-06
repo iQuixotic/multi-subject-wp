@@ -13,7 +13,7 @@
     <header>
         <div class="container">
             <h1>
-                <a href="index.html"><?php bloginfo('name'); ?></a>
+                <a href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>
                 <small><?php bloginfo('description'); ?></small>
             </h1>
             <div class="header-right">
@@ -37,28 +37,37 @@
 
     <div class="container content">
         <div class="block main">
-            <article class="post">
-                <h2>Blog Post One</h2>
-                <p class="meta">posted at 11:00 by Admin</p>
-                <p>Pastry apple pie croissant cake caramels icing fruitcake sweet. Jelly liquorice cake. I love candy canes candy. Sweet roll oat cake jelly powder macaroon cake. Topping halvah cheesecake dessert. I love donut cake lemon drops bear claw jelly-o pudding. Carrot cake sweet sesame snaps candy lollipop jelly beans croissant sesame snaps gummies. Tootsie roll I love jelly-o tiramisu. Croissant I love sesame snaps halvah. Lemon drops marzipan cookie gingerbread pudding tootsie roll I love tootsie roll marzipan. Tiramisu sesame snaps chocolate I love lemon drops. Toffee chocolate fruitcake. Biscuit brownie gingerbread bonbon pastry chocolate ice cream bear claw tart.</p>
+            <?php if(have_posts()) : ?>
+                <?php while(have_posts()) : the_post(); ?>
+                    <article class="post">
+                        <h2><?php the_title(); ?></h2>
+                        <p class="meta">
+                            posted at <?php the_time('F j, Y g:i a'); ?> 
+                            by <a href="<?php echo get_author_posts_url(
+                                get_the_author_meta('ID')); ?>">
+                            <?php the_author(); ?></a> |
+                            Posted in
+                            <?php
+                                $categories = get_the_category();
+                                $separator = ", ";
+                                $output = '';
 
-                <a href="#" class="button"></a>
-            </article>
+                                if($categories) {
+                                    foreach ($categories as $category) {
+                                        $output .= '<a href="'.get_category_link($category->term_id).'">'.$category->cat_name.'</a>'.$separator;
+                                    }
+                                }
 
-            <article class="post">
-                    <h2>Blog Post 2</h2>
-                    <p class="meta">posted at 11:00 by Admin</p>
-                    <p>Pastry apple pie croissant cake caramels icing fruitcake sweet. Jelly liquorice cake. I love candy canes candy. Sweet roll oat cake jelly powder macaroon cake. Topping halvah cheesecake dessert. I love donut cake lemon drops bear claw jelly-o pudding. Carrot cake sweet sesame snaps candy lollipop jelly beans croissant sesame snaps gummies. Tootsie roll I love jelly-o tiramisu. Croissant I love sesame snaps halvah. Lemon drops marzipan cookie gingerbread pudding tootsie roll I love tootsie roll marzipan. Tiramisu sesame snaps chocolate I love lemon drops. Toffee chocolate fruitcake. Biscuit brownie gingerbread bonbon pastry chocolate ice cream bear claw tart.</p>
-    
-                    <a href="#" class="button"></a>
-                </article>
-                <article class="post">
-                        <h2>Blog Post 3</h2>
-                        <p class="meta">posted at 11:00 by Admin</p>
-                        <p>Pastry apple pie croissant cake caramels icing fruitcake sweet. Jelly liquorice cake. I love candy canes candy. Sweet roll oat cake jelly powder macaroon cake. Topping halvah cheesecake dessert. I love donut cake lemon drops bear claw jelly-o pudding. Carrot cake sweet sesame snaps candy lollipop jelly beans croissant sesame snaps gummies. Tootsie roll I love jelly-o tiramisu. Croissant I love sesame snaps halvah. Lemon drops marzipan cookie gingerbread pudding tootsie roll I love tootsie roll marzipan. Tiramisu sesame snaps chocolate I love lemon drops. Toffee chocolate fruitcake. Biscuit brownie gingerbread bonbon pastry chocolate ice cream bear claw tart.</p>
-        
-                        <a href="#" class="button"></a>
-                </article>
+                                echo trim($output, $separator);
+                            ?>
+                        </p>
+                        <p><?php the_excerpt(); ?></p>
+                        <a href="<?php the_permalink(); ?>" class="button">Read More...</a>
+                    </article>
+                <?php endwhile; ?>
+            <?php else : ?>
+                <?php echo apautop('Sorry, No posts were found.'); ?>
+            <?php endif; ?>            
         </div>
         <div class="side">
             <div class="block">

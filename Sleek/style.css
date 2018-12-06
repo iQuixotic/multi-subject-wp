@@ -119,6 +119,10 @@ article.post .meta {
     padding: 7px;
 }
 
+article.post .meta a {
+    color: white;
+}
+
 .button {
     background: #009acd;
     color: #fff;
