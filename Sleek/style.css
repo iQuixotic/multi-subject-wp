@@ -123,15 +123,33 @@ article.post .meta a {
     color: white;
 }
 
+article.post-aside small {
+    font-weight: bold;
+}
+
+article.post-aside .well {
+    background: orange;
+    padding: 10px;
+}
+
+article.post-link .well{
+    background: #e0eefc;
+    padding: 10px;
+}
+
+article.post-gallery{
+    background: #3d3d3d;
+    color: #fff;
+    padding: 5px;
+    margin-top: 5px;
+}
+
 .archive-post {
     border-bottom: rgb(161, 0, 0) 1px solid;
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
-/* 
-.archive-post h4, .archive-post p {
-    mar
-} */
+
 .button {
     background: #009acd;
     color: #fff;
@@ -197,3 +215,9 @@ footer.main-footer a {
     color: #fff;
 }
 
+.phone {
+    background: #f4f4f4;
+    padding: 8px;
+    font-weight: bold;
+    border: 1px solid rgb(189, 0, 148);
+}
