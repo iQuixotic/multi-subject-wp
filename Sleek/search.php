@@ -1,9 +1,20 @@
 <?php get_header(); ?>
     <div class="container content">
         <div class="block main">
+            <h1 class="page-header">
+                Seach Results
+            </h1>
             <?php if(have_posts()) : ?>
                 <?php while(have_posts()) : the_post(); ?>
-                    <?php get_template_part('content'); ?>
+                <div class="archive-post">
+                    <h4>
+                        <a href="<?php the_permalink(); ?>">
+                            <?php the_title(); ?>
+                        </a>
+                    </h4>
+                    <p>Posted on: <?php the_time('F j, Y g:i a'); ?> </p>
+                </div>
+                  
                 <?php endwhile; ?>
             <?php else : ?>
                 <?php echo apautop('Sorry, No posts were found.'); ?>

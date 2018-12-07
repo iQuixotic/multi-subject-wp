@@ -123,11 +123,26 @@ article.post .meta a {
     color: white;
 }
 
+.archive-post {
+    border-bottom: rgb(161, 0, 0) 1px solid;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+/* 
+.archive-post h4, .archive-post p {
+    mar
+} */
 .button {
     background: #009acd;
     color: #fff;
     padding: 10px 15px;
     display: inline-block;
+}
+
+/* Image Stuff */
+article .post-thumbnail img {
+    width: 100%;
+    height: auto;
 }
 
 /* - - - - - - - - - - Sidebar - - - - - - - - - - */
