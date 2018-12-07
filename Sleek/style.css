@@ -90,6 +90,34 @@ nav.main-nav a:hover {
     color: #009acd;
 }
 
+.sub-nav {
+    margin-top: 10px;
+    float: right;
+    width: 300px;
+}
+
+.sub-nav ul {
+    float: right;
+}
+
+.sub-nav .parent-link {
+    font-weight: bolder;
+    color: #000;
+    float: left;
+    margin-right: 20px;
+    padding-right: 20px;
+    border-right: 1px solid #009acd;
+}
+
+.sub-nav .parent-link a {
+    font-weight: bold;
+    color: #000;
+}
+
+.sub-nav .current_page_item {
+    font-weight: bold;
+}
+
 /* - - - - - - - - - - Content - - - - - - - - - - */
 .container {
     width: 960px;
