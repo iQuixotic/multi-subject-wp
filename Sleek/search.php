@@ -14,11 +14,9 @@
             <?php endif; ?>            
         </div>
         <div class="side">
-            <div class="block">
-                <h3>Sidebar Head</h3>
-                <p> I love donut cake lemon drops bear claw jelly-o pudding. Carrot cake sweet sesame snaps candy lollipop jelly beans croissant sesame snaps gummies. Tootsie roll I love jelly-o tiramisu.</p>
-                <a href="#" class="button">Button</a>
-            </div>
+           <?php if(is_active_sidebar('sidebar')) : ?>
+                <?php dynamic_sidebar('sidebar'); ?>
+           <?php endif; ?>
         </div>
     </div>
 <?php get_footer(); ?>
