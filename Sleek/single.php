@@ -7,7 +7,9 @@
                 <?php endwhile; ?>
             <?php else : ?>
                 <?php echo apautop('Sorry, No posts were found.'); ?>
-            <?php endif; ?>            
+            <?php endif; ?>     
+            
+            <?php comments_template(); ?>
         </div>
         <div class="side">
            <?php if(is_active_sidebar('sidebar')) : ?>
